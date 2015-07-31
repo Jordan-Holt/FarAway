@@ -1,6 +1,6 @@
 function initialPosition(e) {									//Call geolocate() from geolocate.js
 	e.preventDefault();
-	position1 = geoLocate();
+	geoLocate();
 }
 
 function geoLocate(){

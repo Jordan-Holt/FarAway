@@ -60,6 +60,7 @@ body {
 #map1, #map2 {
 	height: 300px;
 	width: 400px;
+	border: 1px solid black; 
 }
 
 .current {
