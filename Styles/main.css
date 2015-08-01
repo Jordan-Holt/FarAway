@@ -67,3 +67,7 @@ body {
 	text-shadow: 1px black;
 }
 
+#map-canvas1, #map-canvas2 {
+	height: 300px;
+	width: 400px;
+}

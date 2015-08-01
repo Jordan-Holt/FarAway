@@ -33,11 +33,10 @@ function geoLocate(){											//Find current latitude and longitude.
 }
 
 function getMap1 () {
-	var mapOptions = {
-		zoom: 8, 
-		center: { lat: lat1, lng: lon1}
-	};
-	var map = new google.maps.MAP(document.getElementById("map-canvas1"), mapOptions);
+	var map = new google.maps.MAP(document.getElementById("map-canvas1"), {
+		zoom: 8,
+		center: {lat: lat1, lng: lon1}
+	});
 }
 
 
