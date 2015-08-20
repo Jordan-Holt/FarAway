@@ -101,23 +101,25 @@ function loadAPI(){
 	var script = document.createElement("script");
 	script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAlrWS_4TgEjNtZL3X6H_HCD2Ph2CTUcK0&callback=mapLoaded";
 	script.type = "text/javascript";
+	/*script.async = true;
+	script.defer = true; */
 	document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-/*function loadMaps() {
-	google.load("maps","2",{"callback": mapLoaded});
-} */
+function loadMaps() {
+	google.load("maps","3",{"callback": mapLoaded});
+} 
 
 function mapLoaded() {
-	var map1 = new google.maps.Map(document.getElementById('map-canvas1'), {
+	var map1 = new google.maps.Map(document.getElementById('mapDiv1'), {
 		zoom: 7,
-		center: {lat: lat1, lng: lng1}
+		center: {lat: 165, lng: -50}
 	});
 
-	var map2 = new google.maps.Map(document.getElementById('map-canvas2'), {
+	var map2 = new google.maps.Map(document.getElementById('mapDiv2'), {
 		zoom: 7,
 		center: {lat: -34.397, lng: 150.644}
 	});
 }
-var elMap1 = document.getElementById("getMaps");     		//First Map Button Listener
+var elMap1 = document.getElementById("getMaps");     		//Map Button Listener
 elMap1.addEventListener('click', initMaps, false);
